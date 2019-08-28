@@ -1,5 +1,6 @@
 .main-container {
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
 }
@@ -14,7 +15,7 @@
     width: 20vw;
     background: #617088;
     color: #F6F7F8;
-    margin-top: 3vh;
+    margin-top: 5vh;
 }
 
 .parts-card > p {

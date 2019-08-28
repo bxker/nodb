@@ -16,19 +16,21 @@ export default class Parts extends Component {
     componentDidMount() {
         axios.get('/api/parts').then( response => {
             this.setState({parts: response.data})
+        }).catch(err => {
+            console.log(err)
         })
     }
     
     render(){
         // console.log(this.state.parts[0].part_name)
         return(
-            <div>
+            <div className="main-container">
                 {this.state.parts.map((part) => (
                         <Part 
-                            name={this.state.parts[0].part_name}
-                            description={this.state.parts[0].description}
-                            link={this.state.parts[0].link}
-                            image={this.state.parts[0].image}
+                            name={part.part_name}
+                            description={part.description}
+                            link={part.link}
+                            image={part.image}
                         />
                     )
                 )}

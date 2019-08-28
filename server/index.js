@@ -9,6 +9,12 @@ app.use(express.json());
 //parts endpoints
 //gets all parts
 app.get('/api/parts', partsController.getParts)
+//add part
+app.post('/api/parts', partsController.addPart)
+//update
+
+//delete
+app.delete('/api/parts/:id', partsController.deletePart)
 
 
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
