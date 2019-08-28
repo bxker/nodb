@@ -1,0 +1,44 @@
+.add-inputs {
+    display: flex;
+    height: 12vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.add-inputs > span {
+    margin: 0 3.75vw 0 3.75vw;
+    color: #F6F7F8;
+}
+
+.add-inputs > span > input {
+    margin-left: 1.3vw;
+    padding:5px; 
+    border:2px solid #ccc; 
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.add-button {
+    display: flex;
+    height: 5vh;
+    justify-content: center;
+}
+
+.add-button > button {
+    height: 4vh;
+    width: 8vw;
+    background-color: #617088;
+    border: none;
+    border-radius: 10px;
+    color: #F6F7F8;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+}
+
+.add-button > button:hover {
+    background: #324C66;
+}

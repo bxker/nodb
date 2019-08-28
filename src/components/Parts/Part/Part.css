@@ -1,0 +1,54 @@
+.main-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+
+.parts-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 50vh;
+    width: 20vw;
+    background: #617088;
+    color: #F6F7F8;
+    margin-top: 3vh;
+}
+
+.parts-card > p {
+    text-align: center;
+}
+
+.parts-card > img {
+    max-width: 10vw;
+    min-width: 5vw;
+}
+
+.parts-card h1 {
+    font-size: 2rem;
+}
+
+.parts-card p {
+    font-size: .90rem;
+}
+
+.card-buttons {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.card-buttons button {
+    height: 4vh;
+    width: 5vw;
+    background-color: #91A1B6;
+    border: none;
+    border-radius: 10px;
+    color: #F6F7F8;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+}

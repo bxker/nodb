@@ -1,0 +1,21 @@
+.header {
+    height: 10vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background: #324C66;
+}
+
+.header > section > h1 {
+    font-size: 2rem;
+    color: #F6F7F8;
+}
+
+.search-box > div > input{
+    padding:5px; 
+    border:2px solid #ccc; 
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}

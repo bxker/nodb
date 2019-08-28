@@ -1,0 +1,11 @@
+.header-views > ul {
+    display: flex;
+    width: 20vw;
+    justify-content: space-evenly;
+}
+
+.header-views > ul > li {
+    font-size: 1.2rem;
+    color: #F6F7F8;
+    cursor: pointer;
+}
