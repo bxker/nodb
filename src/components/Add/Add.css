@@ -9,7 +9,8 @@
 
 .add-inputs > span {
     margin: 0 3.75vw 0 3.75vw;
-    color: #617088;
+    color: #324C66;
+    font-weight: 600;
 }
 
 .add-inputs > span > input {
