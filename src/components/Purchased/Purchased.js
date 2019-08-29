@@ -1,14 +1,19 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 
-import Purchase from './Purchase';
+import Purchase from './Purchase/Purchase';
 
 
 export default class Purchased extends Component {
     constructor(props){
         super(props);
         this.state = {
-            purchased: []
+            purchased: [],
+            part_name: '',
+            description: '',
+            link: '',
+            image: ''
+
         }
     }
 
@@ -23,7 +28,17 @@ export default class Purchased extends Component {
     render(){
         return (
             <div>
-                <Purchase />
+                {this.state.purchased.map((part) => (
+                        
+                        <Purchase
+                            // deleteCard={this.props.deleteCard}
+                            name={part.part_name}
+                            description={part.description}
+                            link={part.link}
+                            image={part.image}
+                        />
+                    )
+                )}
             </div>
         )
     }

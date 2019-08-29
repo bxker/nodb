@@ -9,7 +9,6 @@ export default class Parts extends Component {
         return(
             <div className="main-container">
                 {this.props.parts.map((part, index) => (
-                        
                         <Part 
                             deleteCard={this.props.deleteCard}
                             name={part.part_name}
