@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 //css
 import './Add.css'
-import Axios from 'axios';
+import axios from 'axios';
 //component imports
 
 export default class Add extends Component {
@@ -17,28 +17,36 @@ export default class Add extends Component {
     }
 
     handleChange = (e) => {
-        this.setState({ [e.target.name]: e.target.value})
+        this.setState({ 
+            [e.target.name]: e.target.value,
+        })
     }
     
+    handleClick = () => {
+        axios.post('/api/parts', {
+            part_name: this.state.part_name,
+            description: this.state.description,
+            link: this.state.link,
+            image: this.state.image,
+            purchased: this.state.purchased
+        }).then(response => {
+            this.setState({
+                // part_name: response.data
+            })
+        })
+    }
+
     render(){
         return (
             <>
-                <form className="add-inputs" onSubmit={e => {
-                    Axios.post('/api/parts', {
-                        name: this.state.part_name,
-                        description: this.state.description,
-                        link: this.state.link,
-                        image: this.state.image,
-                        purchased: this.state.purchased
-                    })
-                }}>
-                    <span>Part Name: <input type="text"></input></span>
-                    <span>Description: <input type="text"></input></span>
-                    <span>Link: <input type="text"></input></span>
-                    <span>Image: <input type="text"></input></span>
-                </form>
+                <div className="add-inputs">
+                    <span>Part Name: <input type="text" onChange={this.handleChange} value={this.part_name} name="part_name"></input></span>
+                    <span>Description: <input type="text" onChange={this.handleChange} value={this.description} name="description"></input></span>
+                    <span>Link: <input type="text" onChange={this.handleChange} value={this.link} name="link"></input></span>
+                    <span>Image: <input type="text" onChange={this.handleChange} value={this.image} name="image"></input></span>
+                </div>
                 <div className="add-button">
-                    <button>Add</button>
+                    <button onClick={this.handleClick}>Add</button>
                 </div>
             </>
         )
