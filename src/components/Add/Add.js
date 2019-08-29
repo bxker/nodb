@@ -43,6 +43,17 @@ export default class Add extends Component {
         }).catch(err => console.log(err))
     }
 
+    deleteCard = (index) => {
+        axios.delete(`/api/parts/${index}`).then(response => {
+            this.setState({
+                parts: response.data
+            })
+        }).catch(err => {
+            console.log(err)
+        })
+    }
+
+
     render(){
         return (
             <>
@@ -56,7 +67,7 @@ export default class Add extends Component {
                     <button onClick={this.handleClick}>Add</button>
                 </div>
 
-                <Parts parts={this.state.parts}/>
+                <Parts parts={this.state.parts} deleteCard={this.deleteCard}/>
             </>
         )
     }
