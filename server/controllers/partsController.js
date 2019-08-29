@@ -1,4 +1,4 @@
-const parts = [
+let parts = [
     {
         part_name: "Case",
         description: "InWin 303 Black ATX Mid Tower Computer Case with Tempered Glass, Black",

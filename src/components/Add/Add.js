@@ -3,17 +3,25 @@ import React, {Component} from 'react';
 import './Add.css'
 import axios from 'axios';
 //component imports
+import Parts from '../Parts/Parts'
 
 export default class Add extends Component {
     constructor(props){
         super(props);
         this.state = {
+            parts: [],
             part_name: "",
             description: "",
             link: "",
-            image: "",
-            purchased: false
+            image: ""
         }
+    }
+    componentDidMount() {
+        axios.get('/api/parts').then( response => {
+            this.setState({parts: response.data})
+        }).catch(err => {
+            console.log(err)
+        })
     }
 
     handleChange = (e) => {
@@ -27,13 +35,12 @@ export default class Add extends Component {
             part_name: this.state.part_name,
             description: this.state.description,
             link: this.state.link,
-            image: this.state.image,
-            purchased: this.state.purchased
-        }).then(response => {
+            image: this.state.image
+        }).then((response) => {
             this.setState({
-                // part_name: response.data
+                parts: response.data
             })
-        })
+        }).catch(err => console.log(err))
     }
 
     render(){
@@ -48,6 +55,8 @@ export default class Add extends Component {
                 <div className="add-button">
                     <button onClick={this.handleClick}>Add</button>
                 </div>
+
+                <Parts parts={this.state.parts}/>
             </>
         )
     }

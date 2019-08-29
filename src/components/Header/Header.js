@@ -6,7 +6,7 @@ import Nav from './Nav/Nav';
 
 export default function Header(props) {
     return(
-        <div >
+        <div className="header-div">
             <header className="header">
                 <section>
                     <h1>PC Parts List</h1>

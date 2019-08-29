@@ -7,15 +7,14 @@ import './App.css';
 //component imports
 import Header from './components/Header/Header';
 import Add from './components/Add/Add';
-import Parts from './components/Parts/Parts';
 
 
 export default function App() {
   return (
-    <div>
+    <div className="app">
       <Header />
       <Add />
-      <Parts />
+      
     </div>
   );
 }
