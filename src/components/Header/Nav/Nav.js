@@ -5,8 +5,8 @@ export default function Nav(props){
     return (
         <nav className="header-views">
             <ul>
-                <li>Parts</li>
-                <li>Purchased</li>
+                <li onClick={props.changeViewParts} >Parts</li>
+                <li onClick={props.changeViewPurchased} >Purchased</li>
             </ul>
         </nav>
     )

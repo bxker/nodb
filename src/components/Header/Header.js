@@ -11,7 +11,7 @@ export default function Header(props) {
                 <section>
                     <h1>PC Parts List</h1>
                 </section>
-                <Nav />
+                <Nav changeViewParts={props.changeViewParts} changeViewPurchased={props.changeViewPurchased}/>
                 <section className="search-box">
                     <div>
                         {/* <img /> */}
