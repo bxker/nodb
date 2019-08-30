@@ -29,21 +29,25 @@ export default class Purchased extends Component {
 
     render(){
         return (
-            <div className="purchased-div">
-                <button className="clear-all">Clear All Purchases</button>
-                {this.state.purchased.map((part) => (
+            <>
+                <div className="body-container">
+                    <button className="clear-all">Clear All Purchases</button>
+                    <div className="purchased-div">
                         
-                        <Purchase
-                            
-                            // deleteCard={this.props.deleteCard}
-                            name={part.part_name}
-                            description={part.description}
-                            link={part.link}
-                            image={part.image}
-                        />
-                    )
-                )}
-            </div>
+                        {this.state.purchased.map((part) => (
+                                
+                                <Purchase
+                                    // deleteCard={this.props.deleteCard}
+                                    name={part.part_name}
+                                    description={part.description}
+                                    link={part.link}
+                                    image={part.image}
+                                />
+                            )
+                        )}
+                    </div>
+                </div>
+            </>
         )
     }
 }
