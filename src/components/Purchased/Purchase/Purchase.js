@@ -6,7 +6,6 @@ export default function Part(props){
     // console.log(props.index)
     return (
         <div className="main-container main-container2">
-            <button className="clear-all">Clear All Purchases</button>
             <section className="parts-card parts-card2">
                 <img src={props.image} alt={props.part_name} />
                 <h1>{props.name}</h1>

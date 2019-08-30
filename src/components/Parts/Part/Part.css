@@ -44,7 +44,7 @@
 
 .card-buttons button {
     height: 4vh;
-    width: 5vw;
+    width: 6vw;
     background-color: #91A1B6;
     border: none;
     border-radius: 10px;
@@ -54,3 +54,4 @@
     cursor: pointer;
     outline: none;
 }
+

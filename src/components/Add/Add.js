@@ -53,6 +53,20 @@ export default class Add extends Component {
         })
     }
 
+    addToPurchased = (index) => {
+        axios.put(`/api/parts/${index}`, {}).then(response => {
+            console.log(this)
+            this.setState({
+                parts: response.data
+            })
+        }).catch(err => {
+            console.log(err)
+        })
+    }
+    componentWillUnmount() {
+        console.log("unmounting")
+    }
+
 
     render(){
         return (
@@ -66,8 +80,9 @@ export default class Add extends Component {
                 <div className="add-button">
                     <button onClick={this.handleClick}>Add</button>
                 </div>
+                {/* <h2>To update, put the new information in the text fields above and select 'Update' on the part card you want to update.</h2> */}
 
-                <Parts parts={this.state.parts} deleteCard={this.deleteCard}/>
+                <Parts parts={this.state.parts} deleteCard={this.deleteCard} addToPurchased={this.addToPurchased}/>
             </>
         )
     }

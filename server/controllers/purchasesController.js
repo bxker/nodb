@@ -1,9 +1,9 @@
 let purchased = [
     {
-        part_name: "CPU",
-        description: "Intel Core i9-9900K Desktop Processor 8 Cores up to 5.0 GHz Turbo unlocked LGA1151 300 Series 95W",
-        link: "https://www.amazon.com/Intel-i9-9900K-Desktop-Processor-Unlocked/dp/B005404P9I/ref=sr_1_2?crid=YXRYG3FLG9HX&keywords=i7+9900k&qid=1567033437&s=electronics&sprefix=i7%2Celectronics%2C152&sr=1-2",
-        image: "https://images-na.ssl-images-amazon.com/images/I/71RsweT83eL._SL1500_.jpg",
+        part_name: "Motherboard",
+        description: "ASUS ROG Maximus XI Hero (Wi-Fi) Z390 Gaming Motherboard LGA1151 (Intel 8th 9th Gen) ATX DDR4 DP HDMI M.2 USB 3.1 Gen2 802.11AC Wi-Fi",
+        link: "https://www.amazon.com/ROG-Maximus-Hero-Wi-Fi-Motherboard/dp/B07HCXT591/ref=sr_1_1?keywords=motherboard+for+9900k&qid=1567094110&s=electronics&sr=1-1",
+        image: "https://images-na.ssl-images-amazon.com/images/I/81Du2vIqOmL._SL1500_.jpg",
         display: "purchased"
     }
 ];
@@ -13,5 +13,6 @@ const getPurchased = (req, res) => {
 }
 
 module.exports = {
-    getPurchased
+    getPurchased,
+    purchased
 }

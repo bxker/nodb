@@ -1,3 +1,5 @@
+let purchasesController = require('./purchasesController')
+
 let parts = [
     {  
         part_name: "Case",
@@ -24,6 +26,7 @@ const getParts = (req, res) => {
 
 const addPart = (req, res) => {
     parts.push(req.body)
+    // purchasesController.purchased.push(req.body)
     res.json(parts)
 }
 
@@ -36,8 +39,19 @@ const deletePart = (req, res) => {
     res.json(parts)
 }
 
+const movePart = (req, res) => {
+    // console.log('hit')
+    let item = parts.splice(+req.params.id, 1)
+    // console.log(item)
+    purchasesController.purchased.push(item[0])
+    // console.log(parts)
+    // console.log(purchasesController.purchased)
+    res.json(parts)
+}
+
 module.exports = {
     getParts,
     addPart,
-    deletePart
+    deletePart,
+    movePart
 }

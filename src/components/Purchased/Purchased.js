@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 
+
 import Purchase from './Purchase/Purchase';
+import './Purchased.css'
 
 
 export default class Purchased extends Component {
@@ -27,10 +29,12 @@ export default class Purchased extends Component {
 
     render(){
         return (
-            <div>
+            <div className="purchased-div">
+                <button className="clear-all">Clear All Purchases</button>
                 {this.state.purchased.map((part) => (
                         
                         <Purchase
+                            
                             // deleteCard={this.props.deleteCard}
                             name={part.part_name}
                             description={part.description}
@@ -43,3 +47,5 @@ export default class Purchased extends Component {
         )
     }
 }
+
+

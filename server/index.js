@@ -14,6 +14,8 @@ app.get('/api/parts', partsController.getParts)
 app.post('/api/parts', partsController.addPart)
 //update
 // app.put('/api/parts/:id', partsController.updatePart)
+// send to purchased page
+app.put('/api/parts/:id', partsController.movePart)
 //delete
 app.delete('/api/parts/:id', partsController.deletePart)
 
