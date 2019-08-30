@@ -14,9 +14,6 @@ export default function Part(props){
                 <p>{props.description}</p>
                 <div className="card-buttons">
                     <a href={props.link} target="_blank" rel="noopener noreferrer"><button>Buy Here</button></a>
-                    <a href="https://google.com"><button>Update</button></a>
-                </div>
-                <div className="card-buttons">
                     <MoveToPurchased addToPurchased={props.addToPurchased} index={props.index}/>
                     <Delete deleteCard={props.deleteCard} index={props.index}/>
                 </div>
