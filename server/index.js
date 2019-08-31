@@ -16,12 +16,14 @@ app.post('/api/parts', partsController.addPart)
 // app.put('/api/parts/:id', partsController.updatePart)
 // send to purchased page
 app.put('/api/parts/:id', partsController.movePart)
-//delete
+//deletes on parts page
 app.delete('/api/parts/:id', partsController.deletePart)
 
 
 //purchases endpoint
 app.get('/api/purchased', purchasesController.getPurchased)
+//deletes on purchased page
+app.delete('/api/purchased/:id', purchasesController.clearAllPurchases)
 
 
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`));

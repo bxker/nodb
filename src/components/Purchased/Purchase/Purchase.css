@@ -2,6 +2,27 @@
     margin-top: 9vh;
 }
 .card-buttons2 > a > button{
-    width: 10vw;
+    width: 6vw;
     background: #94B691;
+    height: 4vh;
+    border: none;
+    border-radius: 10px;
+    color: #F6F7F8;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+}
+
+.card-buttons2 > button {
+    height: 4vh;
+    width: 6vw;
+    background-color: #91A1B6;
+    border: none;
+    border-radius: 10px;
+    color: #F6F7F8;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
 }

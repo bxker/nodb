@@ -63,14 +63,15 @@ export default class Add extends Component {
             console.log(err)
         })
     }
-    componentWillUnmount() {
-        console.log("unmounting")
-    }
+    // componentWillUnmount() {
+    //     console.log("unmounting")
+    // }
 
 
     render(){
         return (
             <>
+                <h1 className="parts-title">Parts</h1>
                 <div className="add-inputs">
                     <span>Part Name: <input type="text" onChange={this.handleChange} value={this.part_name} name="part_name"></input></span>
                     <span>Description: <input type="text" onChange={this.handleChange} value={this.description} name="description"></input></span>

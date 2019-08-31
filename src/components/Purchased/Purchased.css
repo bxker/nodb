@@ -5,6 +5,13 @@
     align-items: center;
 }
 
+.purchased-title {
+    margin-top: 3vh;
+    font-size: 3rem;
+    font-weight: 600;
+    color: #324C66;
+}
+
 .purchased-div {
     display: flex;
     width: 100vw;

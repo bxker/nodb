@@ -12,7 +12,14 @@ const getPurchased = (req, res) => {
     res.json(purchased)
 }
 
+const clearAllPurchases = (req, res) => {
+    purchased.splice(+req.params.id, 1)
+    res.json(purchased)
+}
+
 module.exports = {
     getPurchased,
-    purchased
+    purchased,
+    clearAllPurchases
 }
+

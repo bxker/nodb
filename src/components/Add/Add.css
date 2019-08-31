@@ -1,3 +1,11 @@
+.parts-title {
+    text-align: center;
+    margin-top: 3vh;
+    font-size: 3rem;
+    font-weight: 600;
+    color: #324C66;
+}
+
 .add-inputs {
     display: flex;
     height: 12vh;

@@ -8,7 +8,6 @@ export default class Parts extends Component {
     render() {
         return (
             <div className="main-container">
-
                 {this.props.parts ? this.props.parts.map((part, index) => (
                     <Part
                         addToPurchased={this.props.addToPurchased}
