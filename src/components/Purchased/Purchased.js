@@ -30,7 +30,7 @@ export default class Purchased extends Component {
     }
 
     deleteItem = (index) => {
-        axios.delete(`/api/purchased/:${index}`).then(response => {
+        axios.delete(`/api/purchased/${index}`).then(response => {
             this.setState({
                 purchased: response.data
             })
@@ -45,8 +45,9 @@ export default class Purchased extends Component {
                 <div className="body-container">
                     <h1 className="purchased-title">Purchased</h1>
                     <div className="purchased-div">
-                        {this.state.purchased ? this.state.purchased.map((part, index) => (
+                        {this.state.purchased && this.state.purchased.length > 0 ? this.state.purchased.map((part, index) => (
                             <Purchase
+                                purchased={this.state.purchased}
                                 deleteItem={this.deleteItem}
                                 name={part.part_name}
                                 description={part.description}
@@ -55,7 +56,7 @@ export default class Purchased extends Component {
                                 index={index}
                             />
                         )
-                        ) : <p>Loading</p>}
+                        ) : <p>No Items Purchased</p>}
                     </div>
                 </div>
             </>

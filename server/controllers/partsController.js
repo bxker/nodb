@@ -30,10 +30,6 @@ const addPart = (req, res) => {
     res.json(parts)
 }
 
-// const updatePart = (req, res) => {
-
-// }
-
 const deletePart = (req, res) => {
     parts.splice(+req.params.id, 1)
     res.json(parts)

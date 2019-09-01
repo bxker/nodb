@@ -12,8 +12,6 @@ app.use(express.json());
 app.get('/api/parts', partsController.getParts)
 //add part
 app.post('/api/parts', partsController.addPart)
-//update
-// app.put('/api/parts/:id', partsController.updatePart)
 // send to purchased page
 app.put('/api/parts/:id', partsController.movePart)
 //deletes on parts page
