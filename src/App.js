@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
 //css
 import './reset.css';
@@ -10,7 +10,7 @@ import Add from './components/Add/Add';
 import Purchased from './components/Purchased/Purchased'
 
 
-export default class App extends Component{
+export default class App extends Component {
   constructor() {
     super();
     this.state = {
@@ -19,21 +19,21 @@ export default class App extends Component{
   }
 
   changeViewParts = () => {
-    if (this.state.display === "purchased"){
-      this.setState({display: "parts"})
+    if (this.state.display === "purchased") {
+      this.setState({ display: "parts" })
     }
   }
 
   changeViewPurchased = () => {
-    if(this.state.display === "parts"){
-      this.setState({display: "purchased"})
+    if (this.state.display === "parts") {
+      this.setState({ display: "purchased" })
     }
   }
 
-  render(){
+  render() {
     return (
       <div className="app">
-        <Header changeViewParts={this.changeViewParts} changeViewPurchased={this.changeViewPurchased}/>
+        <Header changeViewParts={this.changeViewParts} changeViewPurchased={this.changeViewPurchased} />
         {
           this.state.display === "parts"
             ? <Add />

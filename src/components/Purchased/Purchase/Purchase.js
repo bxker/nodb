@@ -2,7 +2,7 @@ import React from 'react';
 import './Purchase.css'
 
 
-export default function Part(props){
+export default function Part(props) {
     console.log(props.index)
     return (
         <div className="main-container2">
@@ -14,7 +14,7 @@ export default function Part(props){
                     <a href={props.link} target="_blank" rel="noopener noreferrer"><button>Purchased ✔</button></a>
                     <button className="clear-all" onClick={() => props.deleteItem(props.index)}>Delete</button>
                 </div>
-            </section> 
+            </section>
         </div>
     )
 }

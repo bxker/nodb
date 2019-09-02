@@ -19,7 +19,7 @@ export default class Parts extends Component {
                         index={index}
                     />
                 )
-                ): <p>Loading</p>}
+                ) : <p>Loading</p>}
             </div>
         )
     }

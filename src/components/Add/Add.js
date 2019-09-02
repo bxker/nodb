@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 //css
 import './Add.css'
 import axios from 'axios';
@@ -6,7 +6,7 @@ import axios from 'axios';
 import Parts from '../Parts/Parts'
 
 export default class Add extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
         this.state = {
             parts: [],
@@ -17,19 +17,19 @@ export default class Add extends Component {
         }
     }
     componentDidMount() {
-        axios.get('/api/parts').then( response => {
-            this.setState({parts: response.data})
+        axios.get('/api/parts').then(response => {
+            this.setState({ parts: response.data })
         }).catch(err => {
             console.log(err)
         })
     }
 
     handleChange = (e) => {
-        this.setState({ 
+        this.setState({
             [e.target.name]: e.target.value,
         })
     }
-    
+
     handleClick = () => {
         axios.post('/api/parts', {
             part_name: this.state.part_name,
@@ -63,12 +63,8 @@ export default class Add extends Component {
             console.log(err)
         })
     }
-    // componentWillUnmount() {
-    //     console.log("unmounting")
-    // }
 
-
-    render(){
+    render() {
         return (
             <>
                 <h1 className="parts-title">Parts</h1>
@@ -81,9 +77,9 @@ export default class Add extends Component {
                 <div className="add-button">
                     <button onClick={this.handleClick}>Add</button>
                 </div>
-                {/* <h2>To update, put the new information in the text fields above and select 'Update' on the part card you want to update.</h2> */}
 
-                <Parts parts={this.state.parts} deleteCard={this.deleteCard} addToPurchased={this.addToPurchased}/>
+
+                <Parts parts={this.state.parts} deleteCard={this.deleteCard} addToPurchased={this.addToPurchased} />
             </>
         )
     }
