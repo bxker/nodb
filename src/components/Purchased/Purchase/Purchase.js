@@ -3,7 +3,6 @@ import './Purchase.css'
 
 
 export default function Part(props) {
-    console.log(props.index)
     return (
         <div className="main-container2">
             <section className="parts-card parts-card2">
