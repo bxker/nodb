@@ -6,12 +6,13 @@ import Part from './Part/Part.js';
 
 export default class Parts extends Component {
     render() {
+        const {parts, addToPurchased, deleteCard} = this.props
         return (
             <div className="main-container">
-                {this.props.parts ? this.props.parts.map((part, index) => (
+                {parts ? parts.map((part, index) => (
                     <Part
-                        addToPurchased={this.props.addToPurchased}
-                        deleteCard={this.props.deleteCard}
+                        addToPurchased={addToPurchased}
+                        deleteCard={deleteCard}
                         name={part.part_name}
                         description={part.description}
                         link={part.link}
